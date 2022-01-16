@@ -9,7 +9,7 @@ using UGF.Serialize.JsonNet.Runtime.Binders;
 using UGF.Serialize.Runtime;
 using UnityEngine;
 
-namespace UGF.Serialize.JsonNet.Bson
+namespace UGF.Serialize.JsonNet.Bson.Runtime
 {
     [CreateAssetMenu(menuName = "Unity Game Framework/Serialize/Serializer JsonNet Bson", order = 2000)]
     public class SerializerJsonNetBsonAsset : SerializerAsset<byte[]>
