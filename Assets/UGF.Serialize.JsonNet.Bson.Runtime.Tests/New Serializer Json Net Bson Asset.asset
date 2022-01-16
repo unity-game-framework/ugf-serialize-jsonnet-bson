@@ -36,4 +36,5 @@ MonoBehaviour:
   m_serializeNames: []
   m_deserializeNames: []
   m_allowAllTypes: 1
-  m_typeProviders: []
+  m_typeProviders:
+  - {fileID: 11400000, guid: 668ea7e42bd35fd46ae639306f128061, type: 2}
