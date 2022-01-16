@@ -1,0 +1,17 @@
+{
+    "name": "UGF.Serialize.JsonNet.Bson.Editor",
+    "rootNamespace": "UGF.Serialize.JsonNet.Bson.Editor",
+    "references": [
+        "GUID:abdd615e45137c74ca2ce9c636c78c15",
+        "GUID:43f3171e634e560429cf9175a9afbb9d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
