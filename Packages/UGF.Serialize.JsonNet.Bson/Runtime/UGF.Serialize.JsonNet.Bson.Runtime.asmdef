@@ -1,0 +1,23 @@
+{
+    "name": "UGF.Serialize.JsonNet.Bson.Runtime",
+    "rootNamespace": "UGF.Serialize.JsonNet.Bson.Runtime",
+    "references": [
+        "GUID:6c7389a7d4bbed54e96eb1e71a69798e",
+        "GUID:088d00b6871540e44bce58af1a3f0f17",
+        "GUID:84cac98db551fae489b1d981e3b0d0f5",
+        "GUID:63a84d759dbdad34287768b1f164c241",
+        "GUID:16fde9420ef50f34db61e711e19381dd",
+        "GUID:e76e47a0b9e0396439161248a194baa5",
+        "GUID:6aeae19aa083b5343897cba5a7bc2714",
+        "GUID:bad5a970b947ebb4f9ff8e654328f349"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

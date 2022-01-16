@@ -1,0 +1,22 @@
+{
+    "name": "UGF.Serialize.JsonNet.Bson.Runtime.Tests",
+    "rootNamespace": "",
+    "references": [
+        "GUID:43f3171e634e560429cf9175a9afbb9d",
+        "GUID:e76e47a0b9e0396439161248a194baa5",
+        "GUID:16fde9420ef50f34db61e711e19381dd",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:6c7389a7d4bbed54e96eb1e71a69798e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
