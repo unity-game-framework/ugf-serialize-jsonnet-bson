@@ -33,7 +33,11 @@ MonoBehaviour:
     m_dateFormatString: yyyy'-'MM'-'dd'T'HH':'mm':'ss.FFFFFFFK
     m_maxDepth: 0
     m_checkAdditionalContent: 0
-  m_serializeNames: []
-  m_deserializeNames: []
+  m_serializeNames:
+  - m_from: $type
+    m_to: type
+  m_deserializeNames:
+  - m_from: type
+    m_to: $type
   m_allowAllTypes: 1
   m_typeProviders: []
