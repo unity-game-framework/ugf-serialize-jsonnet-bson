@@ -1,20 +1,20 @@
 {
-  "name": "com.ugf.package.name",
-  "displayName": "UGF.Package.Name",
+  "name": "com.ugf.serialize.jsonnet.bson",
+  "displayName": "UGF.Serialize.JsonNet.Bson",
   "version": "0.0.0-preview",
   "unity": "2021.2",
   "apiCompatibility": ".NET Standard 2.1",
-  "description": "No description.",
+  "description": "Serializers implementation using Json.Net Bson serialization.",
   "author": {
     "name": "Unity Game Framework",
     "url": "https://github.com/unity-game-framework"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git://github.com/unity-game-framework/ugf-serialize-jsonnet-bson.git"
   },
-  "changelogUrl": "",
-  "licensesUrl": "",
+  "changelogUrl": "https://github.com/unity-game-framework/ugf-serialize-jsonnet-bson/blob/main/changelog.md",
+  "licensesUrl": "https://github.com/unity-game-framework/ugf-serialize-jsonnet-bson/blob/main/license",
   "publishConfig": {
     "registry": "https://unitygameframework.jfrog.io/artifactory/api/npm/default"
   },
