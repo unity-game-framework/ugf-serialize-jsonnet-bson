@@ -9,36 +9,33 @@ namespace UGF.Serialize.JsonNet.Bson.Editor
     internal class SerializerJsonNetBsonAssetEditor : UnityEditor.Editor
     {
         private SerializedProperty m_propertySettings;
-        private SerializerJsonNetBsonConvertNamesListDrawer m_listSerializeNames;
-        private SerializerJsonNetBsonConvertNamesListDrawer m_listDeserializeNames;
+        private ReorderableListKeyAndValueDrawer m_listSerializeNames;
+        private ReorderableListKeyAndValueDrawer m_listDeserializeNames;
         private SerializedProperty m_propertyAllowAllTypes;
-        private ReorderableListDrawer m_listTypeProviders;
-        private ReorderableListSelectionDrawerByElement m_listTypeProvidersSelection;
+        private ReorderableListDrawer m_listCollections;
+        private ReorderableListSelectionDrawerByElement m_listCollectionsSelection;
 
         private void OnEnable()
         {
             m_propertySettings = serializedObject.FindProperty("m_settings");
-            m_listSerializeNames = new SerializerJsonNetBsonConvertNamesListDrawer(serializedObject.FindProperty("m_serializeNames"));
-            m_listDeserializeNames = new SerializerJsonNetBsonConvertNamesListDrawer(serializedObject.FindProperty("m_deserializeNames"));
+            m_listSerializeNames = new ReorderableListKeyAndValueDrawer(serializedObject.FindProperty("m_serializeNames"), "m_from", "m_to");
+            m_listDeserializeNames = new ReorderableListKeyAndValueDrawer(serializedObject.FindProperty("m_deserializeNames"), "m_from", "m_to");
             m_propertyAllowAllTypes = serializedObject.FindProperty("m_allowAllTypes");
-            m_listTypeProviders = new ReorderableListDrawer(serializedObject.FindProperty("m_typeProviders"));
+            m_listCollections = new ReorderableListDrawer(serializedObject.FindProperty("m_collections"));
 
-            m_listTypeProvidersSelection = new ReorderableListSelectionDrawerByElement(m_listTypeProviders)
+            m_listCollectionsSelection = new ReorderableListSelectionDrawerByElement(m_listCollections)
             {
-                Drawer =
-                {
-                    DisplayTitlebar = true
-                }
+                Drawer = { DisplayTitlebar = true }
             };
 
-            m_listTypeProviders.Enable();
-            m_listTypeProvidersSelection.Enable();
+            m_listCollections.Enable();
+            m_listCollectionsSelection.Enable();
         }
 
         private void OnDisable()
         {
-            m_listTypeProviders.Disable();
-            m_listTypeProvidersSelection.Disable();
+            m_listCollections.Disable();
+            m_listCollectionsSelection.Disable();
         }
 
         public override void OnInspectorGUI()
@@ -54,8 +51,8 @@ namespace UGF.Serialize.JsonNet.Bson.Editor
 
                 EditorGUILayout.PropertyField(m_propertyAllowAllTypes);
 
-                m_listTypeProviders.DrawGUILayout();
-                m_listTypeProvidersSelection.DrawGUILayout();
+                m_listCollections.DrawGUILayout();
+                m_listCollectionsSelection.DrawGUILayout();
             }
         }
     }

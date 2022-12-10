@@ -18,13 +18,13 @@ namespace UGF.Serialize.JsonNet.Bson.Runtime
         [SerializeField] private List<ConvertNameData> m_serializeNames = new List<ConvertNameData>();
         [SerializeField] private List<ConvertNameData> m_deserializeNames = new List<ConvertNameData>();
         [SerializeField] private bool m_allowAllTypes = true;
-        [SerializeField] private List<SerializerJsonNetConvertTypeProviderAsset> m_typeProviders = new List<SerializerJsonNetConvertTypeProviderAsset>();
+        [SerializeField] private List<SerializeTypeCollectionAsset> m_collections = new List<SerializeTypeCollectionAsset>();
 
         public SerializerJsonNetSettings Settings { get { return m_settings; } }
         public List<ConvertNameData> SerializeNames { get { return m_serializeNames; } }
         public List<ConvertNameData> DeserializeNames { get { return m_deserializeNames; } }
         public bool AllowAllTypes { get { return m_allowAllTypes; } set { m_allowAllTypes = value; } }
-        public List<SerializerJsonNetConvertTypeProviderAsset> TypeProviders { get { return m_typeProviders; } }
+        public List<SerializeTypeCollectionAsset> Collections { get { return m_collections; } }
 
         [Serializable]
         public struct ConvertNameData
@@ -121,11 +121,18 @@ namespace UGF.Serialize.JsonNet.Bson.Runtime
         {
             if (provider == null) throw new ArgumentNullException(nameof(provider));
 
-            for (int i = 0; i < m_typeProviders.Count; i++)
-            {
-                SerializerJsonNetConvertTypeProviderAsset typeProvider = m_typeProviders[i];
+            var types = new Dictionary<object, Type>();
 
-                typeProvider.SetupTypes(provider);
+            for (int i = 0; i < m_collections.Count; i++)
+            {
+                SerializeTypeCollectionAsset collection = m_collections[i];
+
+                collection.GetTypes(types);
+            }
+
+            foreach ((object id, Type type) in types)
+            {
+                provider.Add(type, id.ToString());
             }
         }
     }
