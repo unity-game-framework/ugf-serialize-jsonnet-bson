@@ -1,14 +1,14 @@
 {
   "dependencies": {
     "com.ugf.builder": {
-      "version": "2.0.1",
+      "version": "2.0.2",
       "depth": 3,
       "source": "registry",
       "dependencies": {},
       "url": "https://unitygameframework.jfrog.io/artifactory/api/npm/default"
     },
     "com.ugf.editortools": {
-      "version": "2.1.0",
+      "version": "2.14.0",
       "depth": 3,
       "source": "registry",
       "dependencies": {},
@@ -33,30 +33,32 @@
       "url": "https://unitygameframework.jfrog.io/artifactory/api/npm/default"
     },
     "com.ugf.runtimetools": {
-      "version": "2.4.0",
+      "version": "2.16.0",
       "depth": 3,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.ugf.editortools": "2.11.0"
+      },
       "url": "https://unitygameframework.jfrog.io/artifactory/api/npm/default"
     },
     "com.ugf.serialize": {
-      "version": "5.0.0",
+      "version": "5.3.0",
       "depth": 2,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.jsonserialize": "1.0.0",
-        "com.ugf.builder": "2.0.1",
-        "com.ugf.editortools": "2.1.0",
-        "com.ugf.runtimetools": "2.4.0"
+        "com.ugf.builder": "2.0.2",
+        "com.ugf.editortools": "2.14.0",
+        "com.ugf.runtimetools": "2.16.0"
       },
       "url": "https://unitygameframework.jfrog.io/artifactory/api/npm/default"
     },
     "com.ugf.serialize.jsonnet": {
-      "version": "2.1.0",
+      "version": "3.0.0-preview",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.ugf.serialize": "5.0.0",
+        "com.ugf.serialize": "5.3.0",
         "com.ugf.jsonnet": "1.4.0"
       },
       "url": "https://unitygameframework.jfrog.io/artifactory/api/npm/default"
@@ -66,19 +68,19 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
-        "com.ugf.serialize.jsonnet": "2.1.0",
+        "com.ugf.serialize.jsonnet": "3.0.0-preview",
         "com.ugf.jsonnet.bson": "1.0.0-preview"
       }
     },
     "com.unity.ext.nunit": {
-      "version": "1.0.6",
+      "version": "2.0.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
-      "version": "3.0.9",
+      "version": "3.0.17",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -87,18 +89,18 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.nuget.newtonsoft-json": {
-      "version": "2.0.2",
+      "version": "3.0.2",
       "depth": 3,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.1.30",
+      "version": "2.0.1-pre.18",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.ext.nunit": "1.0.6",
+        "com.unity.ext.nunit": "2.0.2",
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
