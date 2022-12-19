@@ -8,8 +8,8 @@
       "url": "https://unitygameframework.jfrog.io/artifactory/api/npm/default"
     },
     "com.ugf.editortools": {
-      "version": "2.14.0",
-      "depth": 3,
+      "version": "2.15.0",
+      "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://unitygameframework.jfrog.io/artifactory/api/npm/default"
@@ -42,7 +42,7 @@
       "url": "https://unitygameframework.jfrog.io/artifactory/api/npm/default"
     },
     "com.ugf.serialize": {
-      "version": "5.3.0",
+      "version": "5.3.1",
       "depth": 2,
       "source": "registry",
       "dependencies": {
@@ -54,12 +54,13 @@
       "url": "https://unitygameframework.jfrog.io/artifactory/api/npm/default"
     },
     "com.ugf.serialize.jsonnet": {
-      "version": "3.0.0-preview",
+      "version": "3.0.0-preview.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.ugf.serialize": "5.3.0",
-        "com.ugf.jsonnet": "1.4.0"
+        "com.ugf.serialize": "5.3.1",
+        "com.ugf.jsonnet": "1.4.0",
+        "com.ugf.editortools": "2.15.0"
       },
       "url": "https://unitygameframework.jfrog.io/artifactory/api/npm/default"
     },
@@ -68,7 +69,7 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
-        "com.ugf.serialize.jsonnet": "3.0.0-preview",
+        "com.ugf.serialize.jsonnet": "3.0.0-preview.1",
         "com.ugf.jsonnet.bson": "1.0.0-preview"
       }
     },
