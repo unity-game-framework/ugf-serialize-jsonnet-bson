@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-preview.2](https://github.com/unity-game-framework/ugf-serialize-jsonnet-bson/releases/tag/1.0.0-preview.2) - 2022-12-19  
+
+### Release Notes
+
+- [Milestone](https://github.com/unity-game-framework/ugf-serialize-jsonnet-bson/milestone/3?closed=1)  
+    
+
+### Fixed
+
+- Fix serializer convert names missing labels ([#5](https://github.com/unity-game-framework/ugf-serialize-jsonnet-bson/issues/5))  
+    - Update dependencies: `com.ugf.serialize.jsonnet` to `3.0.0-preview.1` version.
+    - Fix `SerializerJsonNetBsonAsset` class missing display in inspector of labels for `Serialize Names` and `Deserialize Names` collections.
+
 ## [1.0.0-preview.1](https://github.com/unity-game-framework/ugf-serialize-jsonnet-bson/releases/tag/1.0.0-preview.1) - 2022-12-10  
 
 ### Release Notes
