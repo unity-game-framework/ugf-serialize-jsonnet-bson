@@ -18,8 +18,17 @@ namespace UGF.Serialize.JsonNet.Bson.Editor
         private void OnEnable()
         {
             m_propertySettings = serializedObject.FindProperty("m_settings");
-            m_listSerializeNames = new ReorderableListKeyAndValueDrawer(serializedObject.FindProperty("m_serializeNames"), "m_from", "m_to");
-            m_listDeserializeNames = new ReorderableListKeyAndValueDrawer(serializedObject.FindProperty("m_deserializeNames"), "m_from", "m_to");
+
+            m_listSerializeNames = new ReorderableListKeyAndValueDrawer(serializedObject.FindProperty("m_serializeNames"), "m_from", "m_to")
+            {
+                DisplayLabels = true
+            };
+
+            m_listDeserializeNames = new ReorderableListKeyAndValueDrawer(serializedObject.FindProperty("m_deserializeNames"), "m_from", "m_to")
+            {
+                DisplayLabels = true
+            };
+
             m_propertyAllowAllTypes = serializedObject.FindProperty("m_allowAllTypes");
             m_listCollections = new ReorderableListDrawer(serializedObject.FindProperty("m_collections"));
 
